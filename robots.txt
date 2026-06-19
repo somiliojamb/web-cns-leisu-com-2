@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://somiliojamb.github.io/web-cns-leisu-com-2/sitemap.xml

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷速 · 资料索引与信息整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f3f5;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2c2f33;
+            line-height: 1.65;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* hero 区 – 开场短句 */
+        .hero {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.8rem 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e2e5ea;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .hero:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .hero .kicker {
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            color: #7c828b;
+            margin-bottom: 0.6rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+            color: #1f2329;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #4b515a;
+            max-width: 640px;
+        }
+
+        /* 承接段落卡片 */
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2.2rem;
+            border: 1px solid #e2e5ea;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            margin-bottom: 1.8rem;
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #22262c;
+            margin-bottom: 0.9rem;
+            border-left: 3px solid #9aa1ab;
+            padding-left: 1rem;
+        }
+
+        .card p {
+            margin-bottom: 0.9rem;
+            color: #3c4149;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点列表 – 简介卡片网格 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.6rem 0 0.6rem 0;
+        }
+
+        .feature-item {
+            background: #fafbfc;
+            border-radius: 16px;
+            padding: 1.2rem 1.3rem;
+            border: 1px solid #e6e9ee;
+            transition: background 0.15s;
+        }
+
+        .feature-item:hover {
+            background: #f3f5f8;
+        }
+
+        .feature-item .ft-title {
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+            color: #1f2329;
+        }
+
+        .feature-item .ft-desc {
+            font-size: 0.9rem;
+            color: #5c626c;
+            line-height: 1.5;
+        }
+
+        /* 温和结尾区块 */
+        .closing {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2.2rem;
+            border: 1px solid #e2e5ea;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            margin-top: 0.2rem;
+        }
+
+        .closing p {
+            color: #3c4149;
+            margin-bottom: 0.7rem;
+        }
+
+        .closing .link-sentence {
+            font-size: 1rem;
+            margin-top: 0.6rem;
+        }
+
+        .closing a {
+            color: #3b6ea5;
+            text-decoration: none;
+            font-weight: 450;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        .closing a:hover {
+            border-bottom-color: #3b6ea5;
+        }
+
+        /* 小型响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.75rem;
+            }
+
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .card,
+            .closing {
+                padding: 1.6rem 1.3rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+
+            .feature-item {
+                padding: 1rem 1.1rem;
+            }
+        }
+
+        /* 极简辅助 */
+        hr {
+            border: 0;
+            border-top: 1px solid #e2e5ea;
+            margin: 1rem 0;
+        }
+
+        .small-note {
+            font-size: 0.85rem;
+            color: #7f8690;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 开场短句 -->
+    <div class="hero">
+        <div class="kicker">信息整理 · 资料索引</div>
+        <h1>不止于聚合，也在于梳理</h1>
+        <p>在日常信息流中，散落着大量值得留意的内容。将它们系统化地归类、标记、关联，往往比单纯收藏更有价值。这也是 <strong>雷速</strong> 这个索引构建时所遵循的思路。</p>
+    </div>
+
+    <!-- 承接段落：背景与切入点 -->
+    <div class="card">
+        <h2>从一个简单的念头开始</h2>
+        <p>
+            大概在一年多以前，我开始注意到一个现象：很多有用的数据、工具、案例和行业记录，都分散在不同的页面和平台里。每次需要的时候，要么重新搜索，要么凭借模糊的记忆去翻找。如果有一个相对集中的、经过筛选的信息索引，或许能节省不少时间。
+        </p>
+        <p>
+            于是，这个被称为 <a href="https://web-cns-leisu.com" style="color:#3b6ea5; text-decoration:none; font-weight:450; border-bottom:1px solid #d3dbe5;">雷速</a> 的资料整理项目开始成形。它不追求大而全，而是侧重实用、可靠和可追溯。从最初的几十个条目，逐渐丰富成现在的结构。
+        </p>
+    </div>
+
+    <!-- 特点列表卡片（使用网格展示） -->
+    <div class="card">
+        <h2>索引的几个特点</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="ft-title">分类与标签</div>
+                <div class="ft-desc">每条记录都带有明确的分类和关键词，方便按主题或场景定位。</div>
+            </div>
+            <div class="feature-item">
+                <div class="ft-title">来源可查</div>
+                <div class="ft-desc">尽可能保留原始出处或参考链接，便于进一步核实和延伸阅读。</div>
+            </div>
+            <div class="feature-item">
+                <div class="ft-title">周期性整理</div>
+                <div class="ft-desc">不是一次性建设，而是持续更新。每次新增内容都会经过简单筛选。</div>
+            </div>
+            <div class="feature-item">
+                <div class="ft-title">轻量呈现</div>
+                <div class="ft-desc">没有复杂的交互，以内容本身为主。页面风格也尽量克制。</div>
+            </div>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.95rem; color: #5c626c;">
+            这些特点不是为了标新立异，而是让整理本身更可持续。
+        </p>
+    </div>
+
+    <!-- 温和结尾 + FAQ 摘要风格 -->
+    <div class="closing">
+        <p>
+            如果你也经常需要查找某些特定领域的资料，或者对信息分类有些兴趣，不妨花几分钟浏览一下目前的索引结构。也许其中某个分类恰好能帮上忙，也可能给你带来新的分类灵感。
+        </p>
+        <p>
+            页面内容以链接、说明和摘要为主，没有广告或推广信息。每个条目都经过简单核实，但如果你发现任何错误或过时的内容，随时可以反馈。
+        </p>
+
+        <!-- 嵌入自然链接的句子，符合要求：可见文本严格等于「雷速」 -->
+        <p class="link-sentence">
+            想要了解更完整的条目清单，可以直接访问 <a href="https://web-cns-leisu.com">雷速</a> 的主页。
+        </p>
+
+        <hr style="margin:1.2rem 0 0.6rem 0;">
+        <div class="small-note">
+            FAQ 摘要：页面是否需要登录才能查看？不需要，所有条目都是公开可见的。索引多久更新一次？通常每月有1–2次小范围补充，遇到好的素材也会不定期添加。
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
